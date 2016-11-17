@@ -9,27 +9,54 @@
 import UIKit
 
 class NotesViewController: UIViewController {
-
+	
+	@IBOutlet weak var notesTableView: UITableView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		print("A: viewDidLoad")
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		print("A: viewWillAppear")
+		self.notesTableView.dataSource = self
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
-		print("A: viewDidAppear")
+		
+		self.notesTableView.reloadData()
 	}
 	
-	override func viewWillDisappear(_ animated: Bool) {
-		print("A: viewWillDisappear")
+	func getNotes() -> [Note]
+	{
+		// get app delegate
+		let appDelegate = AppDelegate.GetInstance()
+		let notes = appDelegate.notes
+		
+		return notes
+	}
+}
+
+extension NotesViewController: UITableViewDataSource
+{
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
+		print("numberOfRowsInSection")
+		
+		let notes = getNotes()
+		return notes.count
+		
 	}
 	
-	override func viewDidDisappear(_ animated: Bool) {
-		print("A: viewDidDisappear")
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		print("Trying to load cell #\(indexPath.row)")
+		
+		// get the note at that position
+		let notes = getNotes()
+		let note = notes[indexPath.row]
+		
+		// make a cell
+		let cell = UITableViewCell()
+		cell.textLabel!.text = note.title
+		
+		return cell
 	}
 }
 

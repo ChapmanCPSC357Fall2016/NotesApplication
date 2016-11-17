@@ -9,26 +9,21 @@
 import UIKit
 
 class NoteDetailViewController: UIViewController {
-
+	@IBOutlet weak var titleTextField: UITextField!
+	@IBOutlet weak var textTextView: UITextView!
+	
+	var note: Note!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		print("B: viewDidLoad")
+		self.note = Note()
+		let appDelegate = AppDelegate.GetInstance()
+		appDelegate.addNote(note: self.note)
 	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		print("B: viewWillAppear")
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		print("B: viewDidAppear")
-	}
-	
-	override func viewWillDisappear(_ animated: Bool) {
-		print("B: viewWillDisappear")
-	}
-	
-	override func viewDidDisappear(_ animated: Bool) {
-		print("B: viewDidDisappear")
+
+	@IBAction func noteTitleChanged(_ sender: AnyObject) {
+		
+		self.note.title = self.titleTextField.text!
 	}
 }

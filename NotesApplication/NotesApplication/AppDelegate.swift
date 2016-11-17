@@ -12,10 +12,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	
+	private var _notes: [Note] = []
+	var notes: [Note] {
+		
+		return _notes
+	}
+	
+	class func GetInstance() -> AppDelegate
+	{
+		return UIApplication.shared.delegate as! AppDelegate
+	}
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		// hardcode some notes for now
+		for i in 0...50
+		{
+			let note = Note()
+			note.title = "Note #\(i+1)"
+			
+			_notes.append(note)
+		}
+		
 		return true
 	}
 
@@ -41,6 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
 
+	func addNote(note: Note)
+	{
+		self._notes.append(note)
+	}
 
 }
 
