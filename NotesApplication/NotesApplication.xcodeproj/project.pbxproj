@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9208E3D61DED0BC300537596 /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9208E3D51DED0BC300537596 /* UIStoryboard+.swift */; };
 		9258E2931DDA918700EFDC53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258E2921DDA918700EFDC53 /* AppDelegate.swift */; };
 		9258E2951DDA918700EFDC53 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258E2941DDA918700EFDC53 /* NotesViewController.swift */; };
 		9258E2981DDA918700EFDC53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9258E2961DDA918700EFDC53 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9208E3D51DED0BC300537596 /* UIStoryboard+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
 		9258E28F1DDA918700EFDC53 /* NotesApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9258E2921DDA918700EFDC53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9258E2941DDA918700EFDC53 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9258E29E1DDA918700EFDC53 /* Info.plist */,
 				9258E2A41DDA96FC00EFDC53 /* NoteDetailViewController.swift */,
 				92D1AEEA1DDD2C5B0096CEAA /* Note.swift */,
+				9208E3D51DED0BC300537596 /* UIStoryboard+.swift */,
 			);
 			path = NotesApplication;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9208E3D61DED0BC300537596 /* UIStoryboard+.swift in Sources */,
 				9258E2951DDA918700EFDC53 /* NotesViewController.swift in Sources */,
 				9258E2931DDA918700EFDC53 /* AppDelegate.swift in Sources */,
 				9258E2A51DDA96FC00EFDC53 /* NoteDetailViewController.swift in Sources */,

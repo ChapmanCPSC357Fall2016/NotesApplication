@@ -17,13 +17,21 @@ class NoteDetailViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		self.note = Note()
-		let appDelegate = AppDelegate.GetInstance()
-		appDelegate.addNote(note: self.note)
+		if self.note == nil
+		{
+			self.note = Note()
+			let appDelegate = AppDelegate.GetInstance()
+			appDelegate.addNote(note: self.note)
+		}
+		
+		// Set up views with note data
+		self.titleTextField.text = self.note.title
+		self.textTextView.text = self.note.text
 	}
-
-	@IBAction func noteTitleChanged(_ sender: AnyObject) {
+	
+	override func viewWillDisappear(_ animated: Bool) {
 		
 		self.note.title = self.titleTextField.text!
+		self.note.text = self.textTextView.text
 	}
 }

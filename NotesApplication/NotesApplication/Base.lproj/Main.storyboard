@@ -49,7 +49,7 @@
         <!--Note Detail View Controller-->
         <scene sceneID="8MS-mb-qdK">
             <objects>
-                <viewController id="sNf-A0-GlP" customClass="NoteDetailViewController" customModule="NotesApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="note_detail" id="sNf-A0-GlP" customClass="NoteDetailViewController" customModule="NotesApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kco-xK-Xc3"/>
                         <viewControllerLayoutGuide type="bottom" id="kB6-JN-G2Z"/>
@@ -62,9 +62,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="noteTitleChanged:" destination="sNf-A0-GlP" eventType="editingChanged" id="xr8-8W-YHU"/>
-                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note details here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5QU-Vc-LFa">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
