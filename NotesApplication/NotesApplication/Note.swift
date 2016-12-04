@@ -1,5 +1,6 @@
 
 import Foundation
+import CoreLocation
 
 class Note
 {
@@ -30,6 +31,15 @@ class Note
 		return _created
 	}
 	
+	private var _location: CLLocation?
+	var location: CLLocation? {
+		get {
+			return _location
+		}
+		set {
+			_location = newValue
+		}
+	}
 	
 	init()
 	{

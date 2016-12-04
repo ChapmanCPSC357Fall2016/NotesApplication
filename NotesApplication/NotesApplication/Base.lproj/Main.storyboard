@@ -80,7 +80,17 @@
                             <constraint firstItem="cqA-Ac-4Ua" firstAttribute="top" secondItem="kco-xK-Xc3" secondAttribute="bottom" constant="21" id="tWy-sG-tHW"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="CVc-KO-Qm2">
+                        <barButtonItem key="rightBarButtonItem" title="See Map" id="pHw-f6-Z3f">
+                            <connections>
+                                <segue destination="v4t-HS-5ev" kind="show" id="nd8-CE-i6d"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="seeMapButton" destination="pHw-f6-Z3f" id="gkS-yg-25f"/>
                         <outlet property="textTextView" destination="5QU-Vc-LFa" id="j0t-yN-PwZ"/>
                         <outlet property="titleTextField" destination="cqA-Ac-4Ua" id="jOG-sj-IAc"/>
                     </connections>
@@ -88,6 +98,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hZa-Pp-rxa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2061.5999999999999" y="-647.22638680659679"/>
+        </scene>
+        <!--Note Map View Controller-->
+        <scene sceneID="Lqy-bA-gVN">
+            <objects>
+                <viewController id="v4t-HS-5ev" customClass="NoteMapViewController" customModule="NotesApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0I-0m-c3d"/>
+                        <viewControllerLayoutGuide type="bottom" id="BhW-aC-aZA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RVX-S9-jwP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-e5-mRY"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BhW-aC-aZA" firstAttribute="top" secondItem="DcP-e5-mRY" secondAttribute="bottom" id="PXh-ur-h7u"/>
+                            <constraint firstItem="DcP-e5-mRY" firstAttribute="leading" secondItem="RVX-S9-jwP" secondAttribute="leading" id="mTq-jF-HoW"/>
+                            <constraint firstAttribute="trailing" secondItem="DcP-e5-mRY" secondAttribute="trailing" id="sT4-D6-xSQ"/>
+                            <constraint firstItem="DcP-e5-mRY" firstAttribute="top" secondItem="e0I-0m-c3d" secondAttribute="bottom" id="vL3-ke-fcM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ZV-gO-KVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2784.8000000000002" y="-645.42728635682158"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ed2-Pr-1gW">

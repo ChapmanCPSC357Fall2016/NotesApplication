@@ -27,15 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		
-		// hardcode some notes for now
-		for i in 0...50
-		{
-			let note = Note()
-			note.title = "Note #\(i+1)"
-			
-			_notes.append(note)
-		}
-		
 		return true
 	}
 
