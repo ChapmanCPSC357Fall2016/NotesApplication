@@ -15,6 +15,9 @@ class NotesViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		let noteNib = UINib(nibName: "NoteCell", bundle: nil)
+		self.notesTableView.register(noteNib, forCellReuseIdentifier: "note_cell")
+		
 		self.notesTableView.dataSource = self
 		self.notesTableView.delegate = self
 	}
@@ -63,8 +66,9 @@ extension NotesViewController: UITableViewDataSource, UITableViewDelegate
 		let note = notes[indexPath.row]
 		
 		// make a cell
-		let cell = UITableViewCell()
-		cell.textLabel!.text = note.title
+		let cell = self.notesTableView.dequeueReusableCell(withIdentifier: "note_cell") as! NoteCell
+		cell.populate(note: note, navController: self.navigationController!)
+		
 		
 		return cell
 	}

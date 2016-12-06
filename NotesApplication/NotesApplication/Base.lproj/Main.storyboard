@@ -102,7 +102,7 @@
         <!--Note Map View Controller-->
         <scene sceneID="Lqy-bA-gVN">
             <objects>
-                <viewController id="v4t-HS-5ev" customClass="NoteMapViewController" customModule="NotesApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="map_view" id="v4t-HS-5ev" customClass="NoteMapViewController" customModule="NotesApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0I-0m-c3d"/>
                         <viewControllerLayoutGuide type="bottom" id="BhW-aC-aZA"/>
@@ -121,6 +121,9 @@
                             <constraint firstItem="DcP-e5-mRY" firstAttribute="top" secondItem="e0I-0m-c3d" secondAttribute="bottom" id="vL3-ke-fcM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="DcP-e5-mRY" id="Vxs-fq-v0h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZV-gO-KVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

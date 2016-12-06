@@ -48,6 +48,14 @@ class NoteDetailViewController: UIViewController {
 		
 		
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		if let mapVC = segue.destination as? NoteMapViewController
+		{
+			mapVC.note = self.note
+		}
+	}
 }
 
 extension NoteDetailViewController: CLLocationManagerDelegate
