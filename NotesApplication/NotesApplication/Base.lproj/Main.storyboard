@@ -112,10 +112,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-e5-mRY"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qw4-4U-Oj9">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-gt-gwt">
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="QfJ-gt-gwt" firstAttribute="centerX" secondItem="qw4-4U-Oj9" secondAttribute="centerX" id="nHC-M2-dvR"/>
+                                    <constraint firstAttribute="height" constant="105" id="o2J-xu-4oA"/>
+                                    <constraint firstAttribute="width" constant="105" id="tUY-q1-Yfm"/>
+                                    <constraint firstItem="QfJ-gt-gwt" firstAttribute="centerY" secondItem="qw4-4U-Oj9" secondAttribute="centerY" id="u9r-1Z-g27"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BhW-aC-aZA" firstAttribute="top" secondItem="DcP-e5-mRY" secondAttribute="bottom" id="PXh-ur-h7u"/>
+                            <constraint firstItem="BhW-aC-aZA" firstAttribute="top" secondItem="qw4-4U-Oj9" secondAttribute="bottom" id="WIZ-ay-Hf7"/>
+                            <constraint firstAttribute="trailing" secondItem="qw4-4U-Oj9" secondAttribute="trailing" id="Y9r-eq-uD7"/>
                             <constraint firstItem="DcP-e5-mRY" firstAttribute="leading" secondItem="RVX-S9-jwP" secondAttribute="leading" id="mTq-jF-HoW"/>
                             <constraint firstAttribute="trailing" secondItem="DcP-e5-mRY" secondAttribute="trailing" id="sT4-D6-xSQ"/>
                             <constraint firstItem="DcP-e5-mRY" firstAttribute="top" secondItem="e0I-0m-c3d" secondAttribute="bottom" id="vL3-ke-fcM"/>
@@ -123,6 +141,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="DcP-e5-mRY" id="Vxs-fq-v0h"/>
+                        <outlet property="tempLabel" destination="QfJ-gt-gwt" id="0KG-B3-wxU"/>
+                        <outlet property="weatherView" destination="qw4-4U-Oj9" id="26j-dp-jPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ZV-gO-KVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
